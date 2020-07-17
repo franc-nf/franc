@@ -42,8 +42,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "It does not matter how slowly you go as long as you do not stop";
-    const CScript genesisOutputScript = CScript() << ParseHex("04afab89b3670736e72d7d8a2426081782329142bdfe1c42405c470f54d6e635ee5c6ba66fe3128f7eaf1bcce92b4440a14a6199a40d2f8bb79c452d889b89c3e5") << OP_CHECKSIG;
+    const char* pszTimestamp = "Constitution française du 4 octobre 1958 : Liberté, Egalité, Fraternité";
+    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -97,39 +97,39 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x9e;
-        pchMessageStart[1] = 0xf1;
-        pchMessageStart[2] = 0x2c;
-        pchMessageStart[3] = 0x1e;
-        nDefaultPort = 48930;
+        pchMessageStart[0] = 0x9a;
+        pchMessageStart[1] = 0xbd;
+        pchMessageStart[2] = 0xe2;
+        pchMessageStart[3] = 0xa6;
+        nDefaultPort = 48940;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1588417200, 3694275, 0x1e0fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1594909891, 169868988, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000bcd2d9ccbb28606a8b2d962b97394f612bf6e021ce1d64d71cecb008029"));
-        assert(genesis.hashMerkleRoot == uint256S("0xb44e2d41890cc021a91405d7944b77ac4a27fadfc0caa9734c68fc64da09a207"));
+        assert(genesis.hashMerkleRoot == uint256S("0x799e82ea012e6ff6af2b67e0e1392cd5df636bf59a7d723bcea99e141f0d3de3"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed1.bitcoinpos.net");
+       /* vSeeds.emplace_back("seed1.bitcoinpos.net");
         vSeeds.emplace_back("seed2.bitcoinpos.net");
         vSeeds.emplace_back("seed3.bitcoinpos.net");
         vSeeds.emplace_back("seed4.bitcoinpos.net");
         vSeeds.emplace_back("seed5.bitcoinpos.net");
-        vSeeds.emplace_back("seed6.bitcoinpos.net");
+        vSeeds.emplace_back("seed6.bitcoinpos.net");*/
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,8);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(35,36);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,18);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "bp";
+        bech32_hrp = "fr";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -139,13 +139,13 @@ public:
         m_is_mockable_chain = false;
 
         checkpointData = {
-            {
+            /*{
                 { 0, uint256S("0x00000bcd2d9ccbb28606a8b2d962b97394f612bf6e021ce1d64d71cecb008029")},
                 { 50000, uint256S("0x9f1a7b15917cbe23bb5dff82e60da8147820c58dea65793be72506c8e6d22b23")},
                 { 87231, uint256S("0xb0836f48bbcf0e675e9957bdc9a73acee32acb50eb6380719d5348df5509ba02")},
                 { 112802,uint256S("0x622a541f3292d61d8e6ee1d0288a98f8ec6fabbc25e14f7fa33540f1fa65b97a")},
                 { 128654,uint256S("0xb8a8fd8f3a8cbab7f1d2e5d431eab19610ec83d4f6e421f87fa238b1d91e2f92")}
-            }
+            }*/
         };
 
         chainTxData = ChainTxData{
@@ -202,11 +202,11 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00000fe2acf48e35c5b594d9ff7db2a7bbafa1b73205b2789a6833be70595818"); // 0
 
-        pchMessageStart[0] = 0xd5;
-        pchMessageStart[1] = 0x1f;
-        pchMessageStart[2] = 0x35;
-        pchMessageStart[3] = 0x29;
-        nDefaultPort = 48932;
+        pchMessageStart[0] = 0xab;
+        pchMessageStart[1] = 0xd0;
+        pchMessageStart[2] = 0xb2;
+        pchMessageStart[3] = 0xf4;
+        nDefaultPort = 48942;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 40;
         m_assumed_chain_state_size = 2;
@@ -295,11 +295,11 @@ public:
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0x00");
 
-        pchMessageStart[0] = 0xfa;
-        pchMessageStart[1] = 0xbf;
-        pchMessageStart[2] = 0xb5;
-        pchMessageStart[3] = 0xda;
-        nDefaultPort = 48934;
+        pchMessageStart[0] = 0xc1;
+        pchMessageStart[1] = 0xb1;
+        pchMessageStart[2] = 0x82;
+        pchMessageStart[3] = 0xe4;
+        nDefaultPort = 48944;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
         m_assumed_chain_state_size = 0;
