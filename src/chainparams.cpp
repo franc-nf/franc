@@ -43,7 +43,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Constitution française du 4 octobre 1958 : Liberté, Egalité, Fraternité";
-    const CScript genesisOutputScript = CScript() << ParseHex("410436cede40b8366970f4091ec620e4c24706ac23e13f9d0fd25dd414f0e76f93298aa96e63e710ef6fb76e918f0cf7480964d18f556eaf506bd86e020116c60c60ac") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("0436cede40b8366970f4091ec620e4c24706ac23e13f9d0fd25dd414f0e76f93298aa96e63e710ef6fb76e918f0cf7480964d18f556eaf506bd86e020116c60c60") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -55,7 +55,7 @@ public:
     CMainParams() {
         strNetworkID = CBaseChainParams::MAIN;
         consensus.nSubsidyHalvingInterval = 700000;
-        consensus.BIP16Exception = uint256S("0x00000000fb36e709e61ff560e7717c35a8ace1f0a466ed4e435f4f3512a50737");
+        consensus.BIP16Exception = uint256S("0xa3a621282dc7c9c5acc5b2d98b360d257f9f1a719f78b16fcfada7a372783bee");
         consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256S("0x00000b3b403a2b37780a8dc3813e02463cbaceab135efffe4aaacf0446f862d5");
         consensus.BIP65Height = 1;
@@ -112,8 +112,8 @@ public:
         printf("genesis.GetHash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00000000fb36e709e61ff560e7717c35a8ace1f0a466ed4e435f4f3512a50737"));
-        assert(genesis.hashMerkleRoot == uint256S("0x20ed262cdf30457f03e4ffe9530513782f0dbaf488a51e1820f8c4757f802602"));
+        assert(consensus.hashGenesisBlock == uint256S("0xa3a621282dc7c9c5acc5b2d98b360d257f9f1a719f78b16fcfada7a372783bee"));
+        assert(genesis.hashMerkleRoot == uint256S("0x3652da14233d82b45d306617700dbcf25a90735ff3dbbe664eb9748d49de4d8d"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
