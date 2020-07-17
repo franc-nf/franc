@@ -112,7 +112,7 @@ public:
 
 
         assert(consensus.hashGenesisBlock == uint256S("0xa3a621282dc7c9c5acc5b2d98b360d257f9f1a719f78b16fcfada7a372783bee"));
-        assert(genesis.hashMerkleRoot == uint256S("0x20ed262cdf30457f03e4ffe9530513782f0dbaf488a51e1820f8c4757f802602"));
+        assert(genesis.hashMerkleRoot == uint256S("0x3652da14233d82b45d306617700dbcf25a90735ff3dbbe664eb9748d49de4d8d"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
