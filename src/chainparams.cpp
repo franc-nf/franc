@@ -12,7 +12,7 @@
 #include <util/system.h>
 #include <util/strencodings.h>
 #include <versionbitsinfo.h>
-
+#include <logging.h>
 #include <assert.h>
 
 #include <boost/algorithm/string/classification.hpp>
@@ -108,7 +108,7 @@ public:
 
         genesis = CreateGenesisBlock(1594909891, 3199082971, 0x5f1064c3, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        LogPrintf(genesis.GetHash());
+        LogPrint(BCLog::ALL, genesis.GetHash());
 
         assert(consensus.hashGenesisBlock == uint256S("0x00000000fb36e709e61ff560e7717c35a8ace1f0a466ed4e435f4f3512a50737"));
         assert(genesis.hashMerkleRoot == uint256S("0x20ed262cdf30457f03e4ffe9530513782f0dbaf488a51e1820f8c4757f802602"));
