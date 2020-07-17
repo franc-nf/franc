@@ -548,16 +548,16 @@ nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-bitcoin_posd_SOURCES = bitcoind.cpp
-bitcoin_posd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_posd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_posd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+francd_SOURCES = bitcoind.cpp
+francd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+francd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+francd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_posd_SOURCES += bitcoind-res.rc
+francd_SOURCES += bitcoind-res.rc
 endif
 
-bitcoin_posd_LDADD = \
+francd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_COMMON) \
@@ -571,38 +571,38 @@ bitcoin_posd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-bitcoin_posd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+francd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-bitcoin_pos_cli_SOURCES = bitcoin-cli.cpp
-bitcoin_pos_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-bitcoin_pos_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_pos_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+franc_cli_SOURCES = bitcoin-cli.cpp
+franc_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+franc_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+franc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_pos_cli_SOURCES += bitcoin-cli-res.rc
+franc_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-bitcoin_pos_cli_LDADD = \
+franc_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-bitcoin_pos_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+franc_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-bitcoin_pos_tx_SOURCES = bitcoin-tx.cpp
-bitcoin_pos_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_pos_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_pos_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+franc_tx_SOURCES = bitcoin-tx.cpp
+franc_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+franc_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+franc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_pos_tx_SOURCES += bitcoin-tx-res.rc
+franc_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-bitcoin_pos_tx_LDADD = \
+franc_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -610,20 +610,20 @@ bitcoin_pos_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-bitcoin_pos_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+franc_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoin-wallet binary #
-bitcoin_pos_wallet_SOURCES = bitcoin-wallet.cpp
-bitcoin_pos_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-bitcoin_pos_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bitcoin_pos_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+franc_wallet_SOURCES = bitcoin-wallet.cpp
+franc_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+franc_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+franc_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-bitcoin_pos_wallet_SOURCES += bitcoin-wallet-res.rc
+franc_wallet_SOURCES += bitcoin-wallet-res.rc
 endif
 
-bitcoin_pos_wallet_LDADD = \
+franc_wallet_LDADD = \
   $(LIBBITCOIN_WALLET_TOOL) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_SERVER) \
@@ -638,7 +638,7 @@ bitcoin_pos_wallet_LDADD = \
   $(LIBSECP256K1) \
   $(LIBUNIVALUE)
 
-bitcoin_pos_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
+franc_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(MINIUPNPC_LIBS) $(ZMQ_LIBS)
 #
 
 # bitcoinconsensus library #
