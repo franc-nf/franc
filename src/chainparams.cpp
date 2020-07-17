@@ -57,7 +57,7 @@ public:
         consensus.nSubsidyHalvingInterval = 700000;
         consensus.BIP16Exception = uint256S("0xc1cb9a72c048af7b908374b0d9922bf30f14be781241f768891b8f970f1a90b9");
         consensus.BIP34Height = 1;
-        consensus.BIP34Hash = uint256S("0x00000b3b403a2b37780a8dc3813e02463cbaceab135efffe4aaacf0446f862d5");
+        consensus.BIP34Hash = uint256S("0xc1cb9a72c048af7b908374b0d9922bf30f14be781241f768891b8f970f1a90b9");
         consensus.BIP65Height = 1;
         consensus.BIP66Height = 1;
         consensus.CSVHeight = 1;
@@ -87,10 +87,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000100010001"); //block 128654
+        consensus.nMinimumChainWork = uint256S("0x00"); //block 128654
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xb8a8fd8f3a8cbab7f1d2e5d431eab19610ec83d4f6e421f87fa238b1d91e2f92"); //block 128654
+        consensus.defaultAssumeValid = uint256S("0x00"); //block 128654
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -109,7 +109,7 @@ public:
         genesis = CreateGenesisBlock(1594909891, 3199082971, 0x5f1064c3, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        printf("genesis.GetHash = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+        printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
 
 
         assert(consensus.hashGenesisBlock == uint256S("0xc1cb9a72c048af7b908374b0d9922bf30f14be781241f768891b8f970f1a90b9"));
@@ -148,7 +148,7 @@ public:
                 { 50000, uint256S("0x9f1a7b15917cbe23bb5dff82e60da8147820c58dea65793be72506c8e6d22b23")},
                 { 87231, uint256S("0xb0836f48bbcf0e675e9957bdc9a73acee32acb50eb6380719d5348df5509ba02")},
                 { 112802,uint256S("0x622a541f3292d61d8e6ee1d0288a98f8ec6fabbc25e14f7fa33540f1fa65b97a")},
-                { 128654,uint256S("0xb8a8fd8f3a8cbab7f1d2e5d431eab19610ec83d4f6e421f87fa238b1d91e2f92")}
+                { 128654,uint256S("0xc1cb9a72c048af7b908374b0d9922bf30f14be781241f768891b8f970f1a90b9")}
             }*/
         };
 
@@ -201,10 +201,10 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
+        consensus.nMinimumChainWork = uint256S("0x00");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0xc1cb9a72c048af7b908374b0d9922bf30f14be781241f768891b8f970f1a90b9"); // 0
+        consensus.defaultAssumeValid = uint256S("0x00"); // 0
 
         pchMessageStart[0] = 0xab;
         pchMessageStart[1] = 0xd0;
