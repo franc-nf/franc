@@ -108,8 +108,7 @@ public:
 
         genesis = CreateGenesisBlock(1594909891, 3199082971, 0x5f1064c3, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        LogPrint(BCLog::NET, "HASH %s \n", genesis.GetHash().ToString());
-
+        std::cout << genesis.GetHash().ToString();
 
 
         assert(consensus.hashGenesisBlock == uint256S("0x00000000fb36e709e61ff560e7717c35a8ace1f0a466ed4e435f4f3512a50737"));
