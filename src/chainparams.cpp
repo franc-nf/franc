@@ -45,7 +45,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Constitution française du 4 octobre 1958 : Liberté, Egalité, Fraternité";
-    const CScript genesisOutputScript = CScript() << ParseHex("0436cede40b8366970f4091ec620e4c24706ac23e13f9d0fd25dd414f0e76f93298aa96e63e710ef6fb76e918f0cf7480964d18f556eaf506bd86e020116c60c60") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("410436cede40b8366970f4091ec620e4c24706ac23e13f9d0fd25dd414f0e76f93298aa96e63e710ef6fb76e918f0cf7480964d18f556eaf506bd86e020116c60c60ac") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
