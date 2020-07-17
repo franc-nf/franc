@@ -108,7 +108,7 @@ public:
 
         genesis = CreateGenesisBlock(1594909891, 3199082971, 0x5f1064c3, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        LogPrint(BCLog::NET, "HASH %s \n", genesis.GetHash());
+        LogPrint(BCLog::NET, "HASH %i \n", genesis.GetHash());
 
 
 
