@@ -87,7 +87,7 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000025441d95cb16f423"); //block 128654
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000000100010001"); //block 128654
 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("0xb8a8fd8f3a8cbab7f1d2e5d431eab19610ec83d4f6e421f87fa238b1d91e2f92"); //block 128654
@@ -108,7 +108,7 @@ public:
 
         genesis = CreateGenesisBlock(1594909891, 169868988, 0x1d00ffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000bcd2d9ccbb28606a8b2d962b97394f612bf6e021ce1d64d71cecb008029"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000000c20d4480b10e764d262b41eca8426307431a894e17ad17d44c9e8974"));
         assert(genesis.hashMerkleRoot == uint256S("0x8d7b378bc14a8c81196770c5b5bdc8cb7746a4dcbec6b5b9486fa722d2bf07b4"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
@@ -219,8 +219,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed1.bitcoinpos.net");
-        vSeeds.emplace_back("testnet-seed2.bitcoinpos.net");
+        /*vSeeds.emplace_back("testnet-seed1.bitcoinpos.net");
+        vSeeds.emplace_back("testnet-seed2.bitcoinpos.net");*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,78);
@@ -228,7 +228,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "bt";
+        bech32_hrp = "ft";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -238,16 +238,16 @@ public:
         m_is_mockable_chain = false;
 
         checkpointData = {
-            {
+            /*{
                 {0, uint256S("0x00000fe2acf48e35c5b594d9ff7db2a7bbafa1b73205b2789a6833be70595818")},
-            }
+            }*/
         };
 
         chainTxData = ChainTxData{
             // Data from RPC: getchaintxstats 4096 00000000000000b7ab6ce61eb6d571003fbe5fe892da4c9b740c49a07542462d
-            /* nTime    */ 1588417200,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0.0,
+            /* nTime    * 1588417200,*/
+            /* nTxCount * 0,*/
+            /* dTxRate  * 0.0,*/
         };
     }
 };
@@ -320,15 +320,15 @@ public:
         m_is_mockable_chain = true;
 
         checkpointData = {
-            {
+            /*{
                 {0, uint256S("0x2b8d445931aa4ea9b52db1488d3641fa2d4f7a3c1f8151bfa99d017493129e97")},
-            }
+            }*/
         };
 
         chainTxData = ChainTxData{
-            1588417200,
+           /* 1588417200,
             0,
-            0
+            0*/
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
@@ -337,7 +337,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "bpt";
+        bech32_hrp = "frt";
     }
 
     /**
