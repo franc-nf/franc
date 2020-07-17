@@ -111,7 +111,7 @@ public:
         printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
 
 
-        assert(consensus.hashGenesisBlock == uint256S("0x00000000fb36e709e61ff560e7717c35a8ace1f0a466ed4e435f4f3512a50737"));
+        assert(consensus.hashGenesisBlock == uint256S("0xa3a621282dc7c9c5acc5b2d98b360d257f9f1a719f78b16fcfada7a372783bee"));
         assert(genesis.hashMerkleRoot == uint256S("0x20ed262cdf30457f03e4ffe9530513782f0dbaf488a51e1820f8c4757f802602"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
