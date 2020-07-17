@@ -64,10 +64,10 @@ struct Params {
      * This prevents us from warning about the CSV and segwit activations. */
     int MinBIP9WarningHeight;
     /** The size of the step going towards reward matching - rewards from
-     * both chains, bitcoin and bitcoin pos are coming in sync with steps of this size. */
+     * both chains, bitcoin and franc are coming in sync with steps of this size. */
     int BPSRewardMatchStep;
     /** Block height at which BPSRewardMatch becomes active - rewards from
-     * both chains, bitcoin and bitcoin pos are in sync as of this height. */
+     * both chains, bitcoin and franc are in sync as of this height. */
     int BPSRewardMatchHeight;
     /** Block height at which BPSDiffAdj becomes active - difficulty adjustment
      * formula is changed so that block times are more reliable. */

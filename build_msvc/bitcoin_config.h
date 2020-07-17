@@ -27,10 +27,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Bitcoin PoS Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Franc Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Bitcoin PoS Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Franc Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2020
@@ -265,16 +265,16 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitcoin/bitcoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Bitcoin PoS Core"
+#define PACKAGE_NAME "Franc Core"
 
 /* Define to the full name and version of this package. */
 #define PACKAGE_STRING "Bitcoin Core 0.19.99"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "bitcoin-pos"
+#define PACKAGE_TARNAME "franc"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://bitcoinpos.net/"
+#define PACKAGE_URL "https://franc.net/"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "0.19.99"

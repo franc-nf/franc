@@ -71,7 +71,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "bitcoin-pos.conf";
+const char * const BITCOIN_CONF_FILENAME = "franc.conf";
 
 ArgsManager gArgs;
 
@@ -555,13 +555,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Bitcoin-pos
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Bitcoin-pos
-    // Mac: ~/Library/Application Support/Bitcoin-pos
-    // Unix: ~/.bitcoin-pos
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Franc
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Franc
+    // Mac: ~/Library/Application Support/Franc
+    // Unix: ~/.franc
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Bitcoin-pos";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Franc";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -571,10 +571,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Bitcoin-pos";
+    return pathRet / "Library/Application Support/Franc";
 #else
     // Unix
-    return pathRet / ".bitcoin-pos";
+    return pathRet / ".franc";
 #endif
 #endif
 }

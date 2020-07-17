@@ -43,7 +43,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Constitution française du 4 octobre 1958 : Liberté, Egalité, Fraternité";
-    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("0436cede40b8366970f4091ec620e4c24706ac23e13f9d0fd25dd414f0e76f93298aa96e63e710ef6fb76e918f0cf7480964d18f556eaf506bd86e020116c60c60") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -106,22 +106,22 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1594909891, 169868988, 0x1d00ffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1594909891, 169868988, 0x5f1064c3, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000000c20d4480b10e764d262b41eca8426307431a894e17ad17d44c9e8974"));
-        assert(genesis.hashMerkleRoot == uint256S("0x8d7b378bc14a8c81196770c5b5bdc8cb7746a4dcbec6b5b9486fa722d2bf07b4"));
+        assert(genesis.hashMerkleRoot == uint256S("0x20ed262cdf30457f03e4ffe9530513782f0dbaf488a51e1820f8c4757f802602"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        /*vSeeds.emplace_back("seed1.bitcoinpos.net");
-        vSeeds.emplace_back("seed2.bitcoinpos.net");
-        vSeeds.emplace_back("seed3.bitcoinpos.net");
-        vSeeds.emplace_back("seed4.bitcoinpos.net");
-        vSeeds.emplace_back("seed5.bitcoinpos.net");
-        vSeeds.emplace_back("seed6.bitcoinpos.net");*/
+        /*vSeeds.emplace_back("seed1.franc.net");
+        vSeeds.emplace_back("seed2.franc.net");
+        vSeeds.emplace_back("seed3.franc.net");
+        vSeeds.emplace_back("seed4.franc.net");
+        vSeeds.emplace_back("seed5.franc.net");
+        vSeeds.emplace_back("seed6.franc.net");*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(35,36);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,18);
@@ -219,8 +219,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        /*vSeeds.emplace_back("testnet-seed1.bitcoinpos.net");
-        vSeeds.emplace_back("testnet-seed2.bitcoinpos.net");*/
+        /*vSeeds.emplace_back("testnet-seed1.franc.net");
+        vSeeds.emplace_back("testnet-seed2.franc.net");*/
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,78);

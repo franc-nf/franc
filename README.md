@@ -1,40 +1,40 @@
-Bitcoin PoS Core integration/staging tree
+Franc Core integration/staging tree
 =====================================
 
-https://bitcoinpos.net
+https://franc.net
 
-What is Bitcoin PoS?
+What is Franc?
 ----------------
 
-Bitcoin PoS is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin PoS uses peer-to-peer technology to operate
+Franc is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. Franc uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin PoS Core is the name of open source
+out collectively by the network. Franc Core is the name of open source
 software which enables the use of this currency.
 
-Bitcoin PoS Core is built on top of Bitcoin Core. The difference between the two
-is the consensus algorithm: Bitcoin PoS Core uses Proof of Stake consensus, whilst
+Franc Core is built on top of Bitcoin Core. The difference between the two
+is the consensus algorithm: Franc Core uses Proof of Stake consensus, whilst
 Bitcoin Core uses Proof of Work. Using Proof of Stake as a consensus algorithm is
 allowing it not only to scale better and be orders of magnitude more efficient in
 terms of power consumption, but it is also lowering the entry barrier for contributing
 to the creation of new blocks.
 
 For more information, as well as an immediately usable, binary version of
-the Bitcoin PoS Core software, see https://www.bitcoinpos.net/#wallet-bps, or read the
-[original whitepaper](https://www.bitcoinpos.net/WhitePaperBPS.pdf).
+the Franc Core software, see https://www.franc.net/#wallet-bps, or read the
+[original whitepaper](https://www.franc.net/WhitePaperBPS.pdf).
 
 License
 -------
 
-Bitcoin PoS Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Franc Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin-pos/bitcoin-pos/tags) are created
-regularly to indicate new official, stable release versions of Bitcoin PoS Core.
+completely stable. [Tags](https://github.com/franc/franc/tags) are created
+regularly to indicate new official, stable release versions of Franc Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).

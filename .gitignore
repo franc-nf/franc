@@ -3,10 +3,10 @@
 *.exe
 *.pdb
 src/bitcoin
-src/bitcoin-posd
-src/bitcoin-pos-cli
-src/bitcoin-pos-tx
-src/bitcoin-pos-wallet
+src/francd
+src/franc-cli
+src/franc-tx
+src/franc-wallet
 src/test/fuzz
 !src/test/fuzz/*.*
 src/test/test_bitcoin
@@ -90,8 +90,8 @@ src/qt/bitcoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/bitcoin-pos-qt
-Bitcoin-POS-Qt.app
+src/qt/franc-qt
+Franc-Qt.app
 background.tiff*
 
 # Qt Creator
