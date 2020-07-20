@@ -66,7 +66,7 @@
         <translation>అందుకునే చిరునామాలు</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>ఇవి మీరు పంపే చెల్లింపుల బిట్‌కాయిన్ చిరునామాలు. నాణేలు పంపే ముందు ప్రతిసారి అందుకునే చిరునామా మరియు చెల్లింపు మొత్తం సరిచూసుకోండి.</translation>
     </message>
     <message>
@@ -156,7 +156,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>FrancGUI</name>
     <message>
         <source>E&amp;xit</source>
         <translation>నిష్క్రమించు</translation>
@@ -223,7 +223,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin</source>
+        <source>Franc</source>
         <translation>బిట్కోయిన్</translation>
     </message>
     <message>
@@ -433,6 +433,6 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>franc-core</name>
     </context>
 </TS>

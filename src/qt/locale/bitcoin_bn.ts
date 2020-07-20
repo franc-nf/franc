@@ -50,7 +50,7 @@
         <translation>গ্রহণের ঠিকানা</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>এগুলো আপনার পেমেন্ট পাঠানোর বিটকয়েন ঠিকানা। কয়েন পাঠানোর আগে পরিমাণ ও গ্রহণের ঠিকানা সব সময় যাচাই করুন।</translation>
     </message>
     <message>
@@ -156,7 +156,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>FrancGUI</name>
     <message>
         <source>Warning</source>
         <translation>সতর্কতা</translation>
@@ -333,7 +333,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>franc-core</name>
     <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation>আপনি কি পুনরায় ব্লক ডাটাবেইজ এখনই তৈরি করতে চান?</translation>

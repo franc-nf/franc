@@ -42,12 +42,12 @@
         <translation>Ukuthola amakheli</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Lawa amakheli akho e-Bitcoin okuthumela izinkokhelo. Njalo hlola inani nekheli elitholwayo ngaphambi kokuthumela izinhlamvu zemali.</translation>
+        <source>These are your Franc addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Lawa amakheli akho e-Franc okuthumela izinkokhelo. Njalo hlola inani nekheli elitholwayo ngaphambi kokuthumela izinhlamvu zemali.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
-        <translation>Lawa amakheli akho e-Bitcoin athola izinkokhelo. Sebenzisa inkinobho ethi 'Dala ikheli elisha lokuthola' kuthebhu yokwamukela ukudala amakheli amasha.</translation>
+        <source>These are your Franc addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.</source>
+        <translation>Lawa amakheli akho e-Franc athola izinkokhelo. Sebenzisa inkinobho ethi 'Dala ikheli elisha lokuthola' kuthebhu yokwamukela ukudala amakheli amasha.</translation>
     </message>
     <message>
         <source>Export Address List</source>
@@ -145,7 +145,7 @@ Lahla YONKE IBITCOIN YAKHO!</translation>
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>FrancGUI</name>
     </context>
 <context>
     <name>CoinControlDialog</name>
@@ -286,6 +286,6 @@ Lahla YONKE IBITCOIN YAKHO!</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>franc-core</name>
     </context>
 </TS>
