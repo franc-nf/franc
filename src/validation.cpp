@@ -1291,7 +1291,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
     CAmount nSubsidy = 50 * COIN;
 
-    int reductions = (nHeight - 1) / consensusParams.BPSRewardMatchStep;
+    int reductions = (nHeight - 1) / consensusParams.FRRewardMatchStep;
 
     if (reductions <= 3)
     {
@@ -1301,7 +1301,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     else
     {
         nSubsidy >>= 3;
-        reductions = (nHeight - consensusParams.BPSRewardMatchHeight - 1) / consensusParams.nSubsidyHalvingInterval;
+        reductions = (nHeight - consensusParams.FRRewardMatchHeight - 1) / consensusParams.nSubsidyHalvingInterval;
 
         // Force block reward to zero at some point
         if (reductions >= 64)

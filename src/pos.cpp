@@ -3,7 +3,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-// BPSTODO Move this to compiler flags
+// FRTODO Move this to compiler flags
 #define BOOST_VARIANT_USE_RELAXED_GET_BY_DEFAULT
 #include <boost/assign/list_of.hpp>
 

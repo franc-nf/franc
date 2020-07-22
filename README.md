@@ -20,8 +20,8 @@ terms of power consumption, but it is also lowering the entry barrier for contri
 to the creation of new blocks.
 
 For more information, as well as an immediately usable, binary version of
-the Franc Core software, see https://www.franc.net/#wallet-bps, or read the
-[original whitepaper](https://www.franc.net/WhitePaperBPS.pdf).
+the Franc Core software, see https://www.franc.net/#wallet-fr, or read the
+[original whitepaper](https://www.franc.net/WhitePaperFR.pdf).
 
 License
 -------
